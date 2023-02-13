@@ -113,7 +113,7 @@ const BlogPage: React.FunctionComponent<any> = props => {
     }    
 
     type HeaderProps = {
-        children: React.ReactNode; //👈 children prop typr
+        children: React.ReactNode; 
       };
 
     const Header  = (props: any) => {
@@ -125,7 +125,7 @@ const BlogPage: React.FunctionComponent<any> = props => {
         );
       };
 
-    if (loading) return <LoadingComponent></LoadingComponent>;
+    if (loading) return <LoadingComponent  children={false} card={false}></LoadingComponent>;
 
     if (blog)
     {
@@ -136,7 +136,7 @@ const BlogPage: React.FunctionComponent<any> = props => {
                     <ModalHeader>Delete</ModalHeader>
                         <ModalBody>
                             {deleting ?
-                                <Loading />
+                                <Loading children={false} />
                             :
                                 "Are you sure you want to delete this blog?"   
                             }

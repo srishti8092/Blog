@@ -25,23 +25,21 @@ Loading.defaultProps = {
 }
 
 export interface ILoadingComponentProps {
-    card?: boolean;
+    card: boolean;
     dotType?: string;
     children:boolean;
 }
 
 const LoadingComponent: React.FunctionComponent<ILoadingComponentProps> = props => {
-    const { card, children, dotType } = props;
+    const { card, dotType , children } = props;
 
     if (card)
     {
         return (
             <CenterPiece>
-                <Card className="text-center">
+                <Card>
                     <CardBody>
-                        <Loading dotType={dotType}>
-                            {children}
-                        </Loading>
+                        <Loading>{children}</Loading>
                     </CardBody>
                 </Card>
             </CenterPiece>
@@ -59,8 +57,9 @@ const LoadingComponent: React.FunctionComponent<ILoadingComponentProps> = props 
 }
 
 LoadingComponent.defaultProps = {
-    card: true,
-    dotType: 'dot-bricks'
+    dotType: 'dot-bricks',
+    children:false,
+    card:false
 }
 
 export default LoadingComponent;

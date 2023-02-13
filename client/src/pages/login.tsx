@@ -90,7 +90,7 @@ const LoginPage: React.FunctionComponent<{}> = props => {
 
     return (
         <CenterPiece>
-            <Card>
+            <Card dotType={dotType}>
                 <CardHeader>
                     {isLogin ? 'Login' : 'Sign Up'}
                 </CardHeader>

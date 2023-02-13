@@ -195,7 +195,7 @@ const EditPage: React.FunctionComponent<any> = props => {
         }
     }
 
-    if (loading) return <LoadingComponent children={false} />;
+    if (loading) return <LoadingComponent children={false} card={false} />;
 
     return (
         <Container fluid className="p-0">

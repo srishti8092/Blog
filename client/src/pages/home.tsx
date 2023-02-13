@@ -58,7 +58,7 @@ const HomePage: React.FunctionComponent<{}> = props => {
 
     if (loading) 
     {
-        return <LoadingComponent children={false}></LoadingComponent>
+        return <LoadingComponent children={false} card={false}></LoadingComponent>
     }
 
     return (
